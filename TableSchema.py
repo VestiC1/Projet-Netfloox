@@ -36,6 +36,8 @@ ratingsTable = f"""
  CREATE TABLE {Schema}.ratings (
     rId VARCHAR(100) PRIMARYKEY,
     filmId VARCHAR(100),
+    avg_Ratings FLOAT,
+    num_Ratings INT,
     CONSTRAINT Film FOREIGN KEY (filmID) REFERENCES filmbasic(filmId)
  );
 """

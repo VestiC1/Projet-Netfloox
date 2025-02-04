@@ -5,9 +5,9 @@ filmTable = f"""
 CREATE TABLE IF NOT EXISTS {Schema}.filmbasic (
     filmId VARCHAR(100) PRIMARY KEY,
     title VARCHAR(500),
-    mainGenre VARCHAR(500),
-    startYear INT,
-    length INT,
+    mainGenres VARCHAR(500),
+    startYear VARCHAR(10),
+    length VARCHAR(10),
 
 );
 """
@@ -16,8 +16,9 @@ peopleTable = f"""
 CREATE TABLE {Schema}.people (
     pId VARCHAR(100) PRIMARYKEY,
     name VARCHAR(100),
-    yearBirth INT,
-    yearDeath INT
+    yearBirth VARCHAR(10),
+    yearDeath VARCHAR(10),
+    genres VARCHAR(100)
  );"""
 
 #Recuperable depuis title.principals

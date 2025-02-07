@@ -1,0 +1,13 @@
+SELECT "primaryName" , "characters" , "primaryTitle" , "startYear" ,"runtimeMinutes" ,
+split_part("genres", ',', 1) AS genre_1,
+split_part("genres", ',', 2) AS genre_2,
+split_part("genres", ',', 3) AS genre_3
+FROM test.people 
+JOIN test.job ON test.people.nconst = test.job.nconst 
+join test.film on job.tconst = film.tconst 
+where category = 'actor'
+and "startYear" != '\N' 
+and coalesce(cast("startYear" as int),0) > 2000
+and "titleType" = 'movie'
+and "isAdult" = '0'
+LIMIT 1000;

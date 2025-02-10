@@ -1,3 +1,4 @@
+Idée d'extraction pas regrouper avec tout les acteurs
 SELECT "primaryName" , "characters" , "primaryTitle" , "startYear" ,"runtimeMinutes" ,
 split_part("genres", ',', 1) AS genre_1,
 split_part("genres", ',', 2) AS genre_2,
@@ -11,3 +12,24 @@ and coalesce(cast("startYear" as int),0) > 2000
 and "titleType" = 'movie'
 and "isAdult" = '0'
 LIMIT 1000;
+
+
+Nombre de film par année
+select count(film.tconst) , "startYear"
+from test.film
+group by "startYear"
+;
+
+Le total des votes par année
+select SUM(cast(test.ratings."numVotes" as int)) , test.film."startYear"
+from test.ratings
+join test.film on test.film.tconst = test.ratings.tconst 
+group by "startYear";
+
+
+
+L'évolution des nombres de votes par année
+select avg(cast(test.ratings."numVotes" as int)) , test.film."startYear"
+from test.ratings
+join test.film on test.film.tconst = test.ratings.tconst 
+group by "startYear";

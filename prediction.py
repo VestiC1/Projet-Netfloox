@@ -15,7 +15,6 @@ if "model" not in st.session_state:
     "Model Charger"
 
 
-
 #A modifier
 # Movie Name input field
 movieName = st.text_input("Nom du film", "l'homme bicentenaire")
@@ -56,3 +55,4 @@ if(st.button("Predit la popularité")):
     st.dataframe(prediction)
     note = prediction["prediction_label"][0]
     st.write(f"La note prédite du film est de {note:.2f} + ou - 1.39")
+

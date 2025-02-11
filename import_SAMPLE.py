@@ -9,10 +9,10 @@ import requests
 
 def se_connecter_a_la_base_de_donnees():
     """Connexion à la base de données PostgreSQL."""
-    nom_base_de_donnees = "***"
-    utilisateur = "***"
-    mot_de_passe = "***"
-    host = "***"
+    nom_base_de_donnees = "postgres"
+    utilisateur = "psqladmin"
+    mot_de_passe = "GRETAP4!2025***"
+    host = "netfloox-psqlflexibleserver-0.postgres.database.azure.com"
     port = "5432"
 
     try:

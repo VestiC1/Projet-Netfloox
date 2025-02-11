@@ -56,7 +56,7 @@ CREATE TABLE IF NOT EXISTS {Schema}.ratings (
 );"""
     createPeople = f"""
 CREATE TABLE IF NOT EXISTS {Schema}.people(
-    nconst VARCHAR(50),
+    nconst VARCHAR(50) PRIMARY KEY,
     "primaryName" VARCHAR(200),
     "birthYear" VARCHAR(50),
     "deathYear" VARCHAR(50),

@@ -28,6 +28,8 @@ Voir .env.template (à remplir)
 **DataBaseCreation.py** [Create|Import|Job|Ratings|People]: remplissage (filmInfo,jobInfo,ratingsInfo,peopleInfo)
 **import_SAMPLE.py** : fait la même chose (TBD : utiliser le .env)
 
+**request.py** : debug avec streamlit
+
 ### Appli Streamlit
 
 app.py, pages_*.py : appli streamlit (port 8501)
@@ -37,4 +39,9 @@ app.py, pages_*.py : appli streamlit (port 8501)
 
 ### Modélisation
 
-**EDA_APP.py** : 
+Utilisation de pycaret -> utilisation de python **3.11**.
+
+1) Modélisation : création modèle (**my_best_pipeline**) par notebook 
+2) Utilisation dans **prediction.py**
+
+**EDA_APP.py** : Modélisation 

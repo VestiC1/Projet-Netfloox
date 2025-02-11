@@ -1,6 +1,6 @@
 SET search_path to test;
 
-CREATE TABLE IF NOT EXISTS {Schema}.film (
+CREATE TABLE IF NOT EXISTS film (
     tconst VARCHAR(50) PRIMARY KEY,
     "titleType" VARCHAR(50),
     "primaryTitle" VARCHAR(500),
@@ -20,12 +20,12 @@ CREATE TABLE IF NOT EXISTS {Schema}.film (
     characters VARCHAR(200),
     PRIMARY KEY(tconst,ordering)
 );
-CREATE TABLE IF NOT EXISTS {Schema}.ratings (
+CREATE TABLE IF NOT EXISTS ratings (
     tconst VARCHAR(50) PRIMARY KEY,
     "averageRating" VARCHAR(50),
     "numVotes" VARCHAR(50)
 );
-CREATE TABLE IF NOT EXISTS {Schema}.people(
+CREATE TABLE IF NOT EXISTS people(
     nconst VARCHAR(50),
     "primaryName" VARCHAR(200),
     "birthYear" VARCHAR(50),

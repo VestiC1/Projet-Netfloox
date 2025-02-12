@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS ratings (
     "numVotes" VARCHAR(50)
 );
 CREATE TABLE IF NOT EXISTS people(
-    nconst VARCHAR(50),
+    nconst VARCHAR(50) PRIMARY KEY,
     "primaryName" VARCHAR(200),
     "birthYear" VARCHAR(50),
     "deathYear" VARCHAR(50),

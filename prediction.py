@@ -10,8 +10,8 @@ def load_model():
 
 
 # Fonction qui vérifie si le model est deja dans la session state
-if "model" not in st.session_state:
-    st.session_state.model = load_model()
+if "modelpred" not in st.session_state:
+    st.session_state.modelpred = load_model()
     "Model Charger"
 
 
@@ -51,7 +51,7 @@ df = pd.DataFrame([data], columns=columns)
 
 
 if(st.button("Predit la popularité")):
-    prediction = s.predict_model(st.session_state.model,df)
+    prediction = s.predict_model(st.session_state.modelpred,df)
     note = prediction["prediction_label"][0]
     st.write(f"La note prédite du film est de {note:.2f} + ou - 1.39")
 

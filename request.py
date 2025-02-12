@@ -4,7 +4,7 @@ import pandas as pd
 import DataBaseCreation as dbm
 sqlText = st.text_area("Votre requete SQL")
 
-bdM = dbm.DataBaseManager("test")
+bdM = dbm.DataBaseManager()
 
 # Function to create a database connection
 def create_connection():

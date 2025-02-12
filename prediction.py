@@ -18,7 +18,7 @@ if "model" not in st.session_state:
 #A modifier
 # Movie Name input field
 movieName = st.text_input("Nom du film", "l'homme bicentenaire")
-# Set up the layout with 7 columns for each input field
+# Set up the layout with 6 columns for each input field
 col2, col3, col4, col5, col6, col7 = st.columns(6)
 
 
@@ -52,7 +52,6 @@ df = pd.DataFrame([data], columns=columns)
 
 if(st.button("Predit la popularité")):
     prediction = s.predict_model(st.session_state.model,df)
-    st.dataframe(prediction)
     note = prediction["prediction_label"][0]
     st.write(f"La note prédite du film est de {note:.2f} + ou - 1.39")
 
